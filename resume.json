@@ -1,0 +1,86 @@
+{
+  "name": "Satya Himavanth",
+  "title": "AI Research Engineer",
+  "contact": {
+    "phone": "9492790628",
+    "email": "himavantht31@gmail.com",
+    "github": "https://github.com/SatyaHimavanth",
+    "linkedin": "https://www.linkedin.com/in/satyahimavanth-tripurari/"
+  },
+  "objective": "AI Research Engineer specializing in autonomous and agentic systems, with hands-on experience designing, evaluating, and deploying multi-agent architectures for real-world automation. My work sits at the intersection of LLM-based reasoning, system orchestration, and applied research, with a strong focus on translating experimental ideas into scalable, production-ready systems. Passionate about building intelligent agents that interact with software, data, and users in context-aware ways.",
+  "experience": [
+    {
+      "company": "Tata Consultancy Services Limited",
+      "position": "AI Engineer / Research Engineer",
+      "duration": "06-02-2025 - Present",
+      "responsibilities": [
+        "Designed and implemented autonomous AI agents capable of task planning, tool usage, and multi-step reasoning using LLMs and agent orchestration frameworks.",
+        "Conducted applied research on multi-agent coordination, supervisor-based workflows, and agent reproducibility, converting findings into deployable platforms.",
+        "Built research PoCs exploring emerging frameworks (LangChain, LangGraph, Google ADK, A2A) to evaluate agent reliability, scalability, and orchestration patterns.",
+        "Developed agents that interact with software systems and APIs, enabling natural-language-driven automation across databases, ticketing systems, and enterprise tools.",
+        "Established evaluation loops for agent performance, focusing on accuracy, task completion, hallucination reduction, and response consistency.",
+        "Collaborated closely with backend engineers, cloud teams, and stakeholders to align research outcomes with product and client requirements.",
+        "Deployed and managed AI systems on GCP (Cloud Run, Cloud SQL, VPCs, Load Balancers) with CI/CD pipelines and containerized workflows.",
+        "Led internal knowledge-sharing sessions on agentic AI, RAG architectures, and autonomous system design."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BTech with Honors",
+      "institution": "R.V.R & J.C College of Engineering",
+      "score": "8.65",
+      "year": "2024"
+    },
+    {
+      "degree": "Intermediate",
+      "institution": "Abhyaas Junior College",
+      "score": "9.28",
+      "year": "2020"
+    },
+    {
+      "degree": "10th",
+      "institution": "Bhashyam High School",
+      "score": "9.5",
+      "year": "2018"
+    }
+  ],
+  "internships": [
+    {
+      "company": "DRDO",
+      "duration": "19-01-2024 to 19-04-2024",
+      "position": "Research Intern",
+      "responsibilities": [
+        "Gained hands-on experience in various software programs, increasing proficiency and expanding technical skill set.",
+        "Developed an desktop application using Qt to observe and analyze communication over 1553 protocol."
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "programming": ["Python", "SQL", "JavaScript", "Java", "C"],
+    "ai_ml_research": ["PyTorch", "TensorFlow", "Deep Learning", "Computer Vision", "Scikit-learn", "NumPy", "Pandas"],
+    "autonomous_agents_llms": ["LangChain", "LangGraph", "Google ADK", "RAG", "Agentic AI", "Multi-Agent Systems", "Hugging Face", "Transformers", "vLLM"],
+    "automation_integration": ["API-based automation", "Tool-using agents", "Workflow orchestration"],
+    "backend_systems": ["FastAPI", "SQLAlchemy", "REST APIs", "Authentication & RBAC"],
+    "databases": ["PostgreSQL", "MongoDB", "SQLite", "MySQL"],
+    "cloud_devops": ["GCP (Cloud Run, Cloud SQL, VPC)", "Docker", "Git", "CI/CD"]
+  },
+  "softSkills": [
+    "Research-oriented problem solving",
+    "Experimental rigor with practical execution",
+    "Cross-functional collaboration",
+    "Clear technical communication",
+    "Rapid learning and framework adaptation"
+  ],
+  "achievements": [
+    "Received \"On-the-Spot Team Award\" for exceptional performance and collaboration.",
+    "Secured 2nd Place in TCS Internal AI Hackathon, competing against cross-team AI solutions."
+  ],
+  "certifications": [
+    "Cloud and DevOps from EPAM",
+    "Project management from Google",
+    "AWS Academy Cloud Foundations",
+    "Java Full Stack from Wipro",
+    "Advanced Data Analytics from Google"
+  ]
+}

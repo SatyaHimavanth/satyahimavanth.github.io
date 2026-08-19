@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satya Himavanth - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: white;
+      color: #1F2937;
+      line-height: 1.5;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #4F46E5;
+      padding-bottom: 20px;
+    }
+
+    .name {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .title {
+      font-size: 20px;
+      color: #4F46E5;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item a {
+      color: #4F46E5;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin: 30px 0;
+      page-break-inside: avoid;
+    }
+
+    .section h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 4px solid #4F46E5;
+    }
+
+    .objective {
+      background: #F9FAFB;
+      padding: 15px;
+      border-left: 4px solid #4F46E5;
+      margin: 20px 0;
+    }
+
+    .experience-item {
+      margin: 20px 0;
+      padding: 15px;
+      background: #F9FAFB;
+      border-left: 4px solid #7C3AED;
+    }
+
+    .job-header {
+      margin-bottom: 10px;
+    }
+
+    .job-header h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .duration {
+      color: #6B7280;
+      font-size: 14px;
+    }
+
+    .position {
+      color: #06B6D4;
+      font-weight: 600;
+    }
+
+    .responsibilities {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .responsibilities li {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .education-item {
+      padding: 12px;
+      background: #F9FAFB;
+      border-left: 4px solid #F59E0B;
+    }
+
+    .education-header h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .institution {
+      display: block;
+      font-size: 12px;
+      color: #6B7280;
+      margin-bottom: 5px;
+    }
+
+    .score, .year {
+      display: inline-block;
+      padding: 3px 8px;
+      background: white;
+      border-radius: 3px;
+      font-size: 11px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .score {
+      color: #10B981;
+      font-weight: 600;
+    }
+
+    .year {
+      color: #9CA3AF;
+    }
+
+    .skills-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-category {
+      padding: 12px;
+      background: #F9FAFB;
+      border-left: 4px solid #EF4444;
+    }
+
+    .skill-category h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .skill-tag {
+      padding: 4px 8px;
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .soft-skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .soft-skill-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      background: #F9FAFB;
+      border-radius: 4px;
+    }
+
+    .soft-skill-item:hover {
+      background: #F3F4F6;
+    }
+
+    .bullet-point {
+      color: #4F46E5;
+      font-weight: 600;
+    }
+
+    .achievement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px;
+      background: #F9FAFB;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .achievement-item:hover {
+      background: rgba(16, 185, 129, 0.05);
+      border-left: 3px solid #10B981;
+    }
+
+    .achievement-bullet {
+      color: #10B981;
+      font-weight: 600;
+    }
+
+    .certifications-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .certification-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px;
+      background: #F9FAFB;
+      border-radius: 4px;
+    }
+
+    .certification-item:hover {
+      background: rgba(99, 102, 241, 0.05);
+      border-left: 3px solid #4F46E5;
+    }
+
+    .certification-bullet {
+      color: #4F46E5;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid #E5E7EB;
+      text-align: center;
+    }
+
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .download-btn {
+      padding: 12px 24px;
+      background: #4F46E5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .print-btn {
+      padding: 12px 24px;
+      background: white;
+      color: #1F2937;
+      border: 2px solid #E5E7EB;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      background: #4338ca;
+    }
+
+    .print-btn:hover {
+      background: #F9FAFB;
+      border-color: #4F46E5;
+      color: #4F46E5;
+    }
+
+    @media print {
+      .download-btn, .print-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .skills-categories, .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="name">Satya Himavanth</div>
+    <div class="title">AI Research Engineer</div>
+    <div class="contact">
+      <div class="contact-item">📱 <span>9492790628</span></div>
+      <div class="contact-item">✉️ <span>himavantht31@gmail.com</span></div>
+      <div class="contact-item">💻 <a href="https://github.com/SatyaHimavanth" target="_blank">github.com/SatyaHimavanth</a></div>
+      <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/satyahimavanth-tripurari/" target="_blank">linkedin.com/in/satyahimavanth-tripurari</a></div>
+    </div>
+  </div>
+
+  <div class="section" id="objective">
+    <h3>Objective</h3>
+    <div class="objective">
+      AI Research Engineer specializing in autonomous and agentic systems, with hands-on experience designing, evaluating, and deploying multi-agent architectures for real-world automation. My work sits at the intersection of LLM-based reasoning, system orchestration, and applied research, with a strong focus on translating experimental ideas into scalable, production-ready systems. Passionate about building intelligent agents that interact with software, data, and users in context-aware ways.
+    </div>
+  </div>
+
+  <div class="section" id="experience">
+    <h3>Experience</h3>
+    <div class="experience-item">
+      <div class="job-header">
+        <h4>Tata Consultancy Services Limited</h4>
+        <span class="duration">06-02-2025 - Present</span>
+        <span class="position">AI Engineer / Research Engineer</span>
+      </div>
+      <ul class="responsibilities">
+        <li>Designed and implemented autonomous AI agents capable of task planning, tool usage, and multi-step reasoning using LLMs and agent orchestration frameworks.</li>
+        <li>Conducted applied research on multi-agent coordination, supervisor-based workflows, and agent reproducibility, converting findings into deployable platforms.</li>
+        <li>Built research PoCs exploring emerging frameworks (LangChain, LangGraph, Google ADK, A2A) to evaluate agent reliability, scalability, and orchestration patterns.</li>
+        <li>Developed agents that interact with software systems and APIs, enabling natural-language-driven automation across databases, ticketing systems, and enterprise tools.</li>
+        <li>Established evaluation loops for agent performance, focusing on accuracy, task completion, hallucination reduction, and response consistency.</li>
+        <li>Collaborated closely with backend engineers, cloud teams, and stakeholders to align research outcomes with product and client requirements.</li>
+        <li>Deployed and managed AI systems on GCP (Cloud Run, Cloud SQL, VPCs, Load Balancers) with CI/CD pipelines and containerized workflows.</li>
+        <li>Led internal knowledge-sharing sessions on agentic AI, RAG architectures, and autonomous system design.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section" id="education">
+    <h3>Education</h3>
+    <div class="education-grid">
+      <div class="education-item">
+        <div class="education-header">
+          <h4>BTech with Honors</h4>
+          <span class="institution">R.V.R & J.C College of Engineering</span>
+          <span class="score">8.65 / 10</span>
+          <span class="year">2024</span>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="education-header">
+          <h4>Intermediate</h4>
+          <span class="institution">Abhyaas Junior College</span>
+          <span class="score">9.28 / 10</span>
+          <span class="year">2020</span>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="education-header">
+          <h4>10th</h4>
+          <span class="institution">Bhashyam High School</span>
+          <span class="score">9.5 / 10</span>
+          <span class="year">2018</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="internships">
+    <h3>Internships</h3>
+    <div class="experience-item">
+      <div class="job-header">
+        <h4>DRDO</h4>
+        <span class="duration">19-04-2024 to 19-01-2024</span>
+        <span class="position">Research Intern</span>
+      </div>
+      <ul class="responsibilities">
+        <li>Gained hands-on experience in various software programs, increasing proficiency and expanding technical skill set.</li>
+        <li>Developed an desktop application using Qt to observe and analyze communication over 1553 protocol.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section" id="technical-skills">
+    <h3>Technical Skills</h3>
+    <div class="skills-categories">
+      <div class="skill-category">
+        <h4>Programming</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>AI/ML & Research</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Pandas</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Autonomous Agents & LLMs</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">LangGraph</span>
+          <span class="skill-tag">Google ADK</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">Agentic AI</span>
+          <span class="skill-tag">Multi-Agent Systems</span>
+          <span class="skill-tag">Hugging Face</span>
+          <span class="skill-tag">Transformers</span>
+          <span class="skill-tag">vLLM</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Automation & Integration</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">API-based automation</span>
+          <span class="skill-tag">Tool-using agents</span>
+          <span class="skill-tag">Workflow orchestration</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Backend & Systems</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">SQLAlchemy</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Authentication & RBAC</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Databases</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Cloud & DevOps</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">GCP (Cloud Run, Cloud SQL, VPC)</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="soft-skills">
+    <h3>Soft Skills</h3>
+    <div class="soft-skills-container">
+      <div class="soft-skill-item">• <span>Research-oriented problem solving</span></div>
+      <div class="soft-skill-item">• <span>Experimental rigor with practical execution</span></div>
+      <div class="soft-skill-item">• <span>Cross-functional collaboration</span></div>
+      <div class="soft-skill-item">• <span>Clear technical communication</span></div>
+      <div class="soft-skill-item">• <span>Rapid learning and framework adaptation</span></div>
+    </div>
+  </div>
+
+  <div class="section" id="achievements">
+    <h3>Achievements & Awards</h3>
+    <div class="achievement-item">• <span>Received "On-the-Spot Team Award" for exceptional performance and collaboration.</span></div>
+    <div class="achievement-item">• <span>Secured 2nd Place in TCS Internal AI Hackathon, competing against cross-team AI solutions.</span></div>
+  </div>
+
+  <div class="section" id="certifications">
+    <h3>Certifications</h3>
+    <div class="certifications-container">
+      <div class="certification-item">• <span>Cloud and DevOps from EPAM</span></div>
+      <div class="certification-item">• <span>Project management from Google</span></div>
+      <div class="certification-item">• <span>AWS Academy Cloud Foundations</span></div>
+      <div class="certification-item">• <span>Java Full Stack from Wipro</span></div>
+      <div class="certification-item">• <span>Advanced Data Analytics from Google</span></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Last Updated: June 24, 2026</p>
+    <div class="footer-buttons">
+      <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+      <button class="print-btn" onclick="window.print()">Print Resume</button>
+    </div>
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const opt = {
+        margin: [10, 10, 10, 10],
+        filename: 'Satya_Himavanth_Resume.pdf',
+        image: { type: 'jpeg', quality: 0.95 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+      html2pdf().set(opt).save();
+    }
+  </script>
+</body>
+</html>

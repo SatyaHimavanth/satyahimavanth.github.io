@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GenAI Developer specializing in multi-agent systems, LLM orchestration, and production AI infrastructure.">
+  <title>Satya Himavanth — GenAI Developer</title>
+
+  <!-- Open Graph / Social
+       NOTE: og:image below is a placeholder — this file doesn't exist in
+       this repo. Add a real 1200x630 og-card.png before relying on link
+       previews on LinkedIn/Twitter, or they'll render broken/blank. -->
+  <meta property="og:title" content="Satya Himavanth — GenAI Developer">
+  <meta property="og:description" content="GenAI Developer engineering multi-agent systems, LLM orchestration pipelines, and production-ready AI infrastructure.">
+  <meta property="og:url" content="https://satyahimavanth.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Satya Himavanth — GenAI Developer">
+  <meta name="twitter:description" content="GenAI Developer engineering multi-agent systems, LLM orchestration, and production AI infrastructure.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── BACKGROUND LAYERS ── -->
+  <canvas id="constellation-canvas" aria-hidden="true"></canvas>
+  <div id="keyword-layer" aria-hidden="true"></div>
+  <div id="agent-layer" aria-hidden="true"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo" aria-label="Home">
+      <span class="logo-hex" aria-hidden="true">⬡</span>
+      <span class="logo-wordmark">AGENT<span class="logo-accent">OS</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle color theme">
+      <span id="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+    <a href="resume.html" class="btn-download">View &amp; Download Resume</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-inner">
+
+      <div class="glass-card hero-card">
+        <div class="status-badge" role="status">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Available for projects
+        </div>
+
+        <h1>
+          <span class="h1-eyebrow">Building the</span>
+          <span class="h1-main">Agent Layer</span>
+          <span class="h1-sub">of the future</span>
+        </h1>
+
+        <p class="hero-bio">
+          I'm <strong>Satya Himavanth</strong>, a GenAI Developer engineering multi-agent systems,
+          LLM orchestration pipelines, and production-ready AI infrastructure.
+          I build the systems that let AI agents think, collaborate, and act at scale.
+        </p>
+
+        <div class="hero-badges" aria-label="Specializations">
+          <span class="badge">A2A Protocol</span>
+          <span class="badge">MCP Servers</span>
+          <span class="badge">Agent Swarms</span>
+          <span class="badge">LLM Ops</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Hire Me</a>
+          <a href="Satya_Himavanth_Resume.pdf" class="btn-download-hero" download>Download CV</a>
+          <a href="#projects" class="btn-ghost">View Work →</a>
+        </div>
+      </div>
+
+      <div class="hero-metrics" aria-label="Key metrics">
+        <div class="glass-card metric-card">
+          <span class="metric-value">11<span class="metric-plus">+</span></span>
+          <span class="metric-label">AI Agents Built</span>
+          <span class="metric-date">as of 2026</span>
+        </div>
+        <div class="glass-card metric-card">
+          <span class="metric-value">6</span>
+          <span class="metric-label">Agent Frameworks</span>
+          <span class="metric-date">as of 2026</span>
+        </div>
+        <div class="glass-card metric-card">
+          <span class="metric-value">1<span class="metric-plus">+</span></span>
+          <span class="metric-label">Year in GenAI</span>
+          <span class="metric-date">as of 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" aria-label="About">
+    <p class="section-eyebrow">// about.init()</p>
+    <h2 class="section-heading">Who is this agent?</h2>
+    <div class="about-grid">
+      <article class="glass-card feature-card">
+        <div class="feature-icon" aria-hidden="true">🧠</div>
+        <h3>Architecture First</h3>
+        <p>I design agent systems from first principles — deciding between orchestration patterns, tool-use strategies, and memory architectures before writing a single line of code.</p>
+      </article>
+      <article class="glass-card feature-card">
+        <div class="feature-icon" aria-hidden="true">⚙️</div>
+        <h3>Production-Grade</h3>
+        <p>My agents don't live in notebooks. I build with observability, eval pipelines, error handling, and rate-limit awareness from day one — ready for real workloads.</p>
+      </article>
+      <article class="glass-card feature-card">
+        <div class="feature-icon" aria-hidden="true">🔗</div>
+        <h3>Protocol Native</h3>
+        <p>Deep experience with A2A, MCP, and emerging agent communication standards. I build interoperable systems that can talk to any agent in the ecosystem.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" aria-label="Projects">
+    <p class="section-eyebrow">// projects.load()</p>
+    <h2 class="section-heading">Shipped to production</h2>
+    <p class="section-sub"><span class="mono">›</span> Click any floating keyword in the background to open its project. Or browse below.</p>
+    <div class="projects-grid" id="projects-grid" role="list"></div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" aria-label="Skills">
+    <p class="section-eyebrow">// skills.enumerate()</p>
+    <h2 class="section-heading">Stack &amp; toolchain</h2>
+    <div class="skills-grid">
+      <div class="glass-card skill-group">
+        <h3 class="skill-cat">Agent Frameworks</h3>
+        <div class="pill-cluster">
+          <span class="pill">LangChain</span>
+          <span class="pill">LangGraph</span>
+          <span class="pill">Google ADK</span>
+          <span class="pill">AutoGen</span>
+          <span class="pill">CrewAI</span>
+          <span class="pill">Swarms</span>
+        </div>
+      </div>
+      <div class="glass-card skill-group">
+        <h3 class="skill-cat">Protocols &amp; APIs</h3>
+        <div class="pill-cluster">
+          <span class="pill">A2A</span>
+          <span class="pill">MCP</span>
+          <span class="pill">Tool Use</span>
+          <span class="pill">Function Calling</span>
+          <span class="pill">RAG</span>
+          <span class="pill">GraphRAG</span>
+        </div>
+      </div>
+      <div class="glass-card skill-group">
+        <h3 class="skill-cat">Infrastructure</h3>
+        <div class="pill-cluster">
+          <span class="pill">Python</span>
+          <span class="pill">FastAPI</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Redis</span>
+          <span class="pill">Qdrant</span>
+          <span class="pill">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="glass-card skill-group">
+        <h3 class="skill-cat">Models &amp; Providers</h3>
+        <div class="pill-cluster">
+          <span class="pill">Claude</span>
+          <span class="pill">GPT-4o</span>
+          <span class="pill">Gemini</span>
+          <span class="pill">Llama 3</span>
+          <span class="pill">Mistral</span>
+          <span class="pill">Cohere</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" aria-label="Contact">
+    <p class="section-eyebrow">// contact.reach()</p>
+    <h2 class="section-heading">Initiate connection</h2>
+    <div class="glass-card contact-card">
+      <p class="contact-intro">
+        Have an agent system to build? A swarm to orchestrate?
+        A tool-use pipeline to debug? Let's talk.
+      </p>
+      <nav class="contact-links" aria-label="Contact channels">
+        <a href="mailto:himavantht31@gmail.com" class="contact-item">
+          <span class="contact-icon" aria-hidden="true">✉</span>
+          himavantht31@gmail.com
+        </a>
+        <a href="https://github.com/SatyaHimavanth" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon" aria-hidden="true">⌥</span>
+          github.com/SatyaHimavanth
+        </a>
+        <a href="https://www.linkedin.com/in/satyahimavanth-tripurari/" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon" aria-hidden="true">◈</span>
+          linkedin.com/in/satyahimavanth-tripurari
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p class="mono">Satya Himavanth · GenAI Developer · <span id="footer-year"></span></p>
+    <p class="footer-note">Made with agents, probably.</p>
+  </footer>
+
+  <!-- ── PROJECT MODAL ── -->
+  <div id="modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="glass-card modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      <span class="modal-tag" id="modal-tag"></span>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-tech" id="modal-tech"></div>
+      <div class="modal-actions">
+        <a id="modal-gh" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">GitHub →</a>
+        <a id="modal-demo" href="#" target="_blank" rel="noopener noreferrer" class="btn-ghost" hidden>Live Demo ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CHAT WIDGET ── -->
+  <div id="chat-widget" role="complementary" aria-label="Portfolio assistant">
+    <div id="chat-panel" class="glass-card" hidden>
+
+      <!-- Drag-to-resize handle (top-left corner) -->
+      <div id="chat-resize-handle" title="Drag to resize" aria-hidden="true">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <circle cx="2" cy="2" r="1.5" fill="currentColor" opacity=".5"/>
+          <circle cx="6" cy="2" r="1.5" fill="currentColor" opacity=".5"/>
+          <circle cx="2" cy="6" r="1.5" fill="currentColor" opacity=".5"/>
+          <circle cx="6" cy="6" r="1.5" fill="currentColor" opacity=".75"/>
+          <circle cx="10" cy="6" r="1.5" fill="currentColor" opacity=".5"/>
+          <circle cx="6" cy="10" r="1.5" fill="currentColor" opacity=".5"/>
+          <circle cx="10" cy="10" r="1.5" fill="currentColor" opacity=".75"/>
+        </svg>
+      </div>
+
+      <!-- Header -->
+      <div class="chat-header">
+        <div class="chat-bot-info">
+          <span class="chat-bot-icon" aria-hidden="true">🤖</span>
+          <div>
+            <div class="chat-bot-name">AgentBot</div>
+            <div class="chat-bot-status">
+              <span class="pulse-dot small" aria-hidden="true"></span>
+              <span id="chat-status-text">online</span>
+            </div>
+          </div>
+        </div>
+        <button id="chat-close" aria-label="Close chat assistant">✕</button>
+      </div>
+
+      <!-- Message log -->
+      <div id="chat-messages" role="log" aria-live="polite" aria-label="Chat messages"></div>
+
+      <!-- Footer: two swappable panels -->
+      <div class="chat-footer">
+
+        <!-- Option chips (only mode — no free-text AI input) -->
+        <div id="chat-options-area" role="group" aria-label="Chat options"></div>
+
+      </div>
+    </div>
+
+    <button id="chat-toggle" aria-label="Open portfolio assistant" aria-expanded="false">
+      <span id="chat-toggle-icon" aria-hidden="true">🤖</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
